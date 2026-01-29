@@ -10,6 +10,18 @@ return {
             })
         end,
     },
+    {
+        "WhoIsSethDaniel/mason-tool-installer.nvim",
+        config = function()
+            require("mason-tool-installer").setup({
+                ensure_installed = {
+                    "prettierd",
+                    "stylua",
+                    "eslint_d",
+                },
+            })
+        end,
+    },
     -- mason lsp config utilizes mason to automatically ensure lsp servers you want installed are installed
     {
         "williamboman/mason-lspconfig.nvim",
