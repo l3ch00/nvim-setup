@@ -110,10 +110,6 @@ return {
 
             vim.diagnostic.config(default_diagnostic_config)
 
-            for _, sign in ipairs(vim.tbl_get(vim.diagnostic.config(), "signs", "values") or {}) do
-                vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = sign.name })
-            end
-
             -- Set vim motion for <Space> + c + h to show code documentation about the code the cursor is currently over if available
             vim.keymap.set("n", "<leader>ch", vim.lsp.buf.hover, { desc = "[C]ode [H]over Documentation" })
             -- Set vim motion for <Space> + c + d to go where the code/variable under the cursor was defined
