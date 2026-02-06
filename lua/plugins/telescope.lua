@@ -3,6 +3,15 @@ return {
         'nvim-telescope/telescope.nvim',
         -- pull a specific version of the plugin
         tag = '0.1.6',
+        cmd = "Telescope",
+        keys = {
+            { "<leader>ff", desc = "[F]ind [F]iles" },
+            { "<leader>fg", desc = "[F]ind by [G]rep" },
+            { "<leader>fd", desc = "[F]ind [D]iagnostics" },
+            { "<leader>fr", desc = "[F]inder [R]esume" },
+            { "<leader>f.", desc = "[F]ind Recent Files" },
+            { "<leader>fb", desc = "[F]ind Existing [B]uffers" },
+        },
         dependencies = {
             {
                 -- general purpose plugin used to build user interfaces in neovim plugins

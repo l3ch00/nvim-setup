@@ -1,8 +1,10 @@
 return {
 	"nvim-tree/nvim-tree.lua",
+	cmd = { "NvimTreeToggle", "NvimTreeFocus", "NvimTreeOpen" },
+	keys = {
+		{ "<leader>e", "<cmd>NvimTreeToggle<CR>", desc = "Toggle [E]xplorer" },
+	},
 	config = function()
-		vim.keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle [E]xplorer" })
-
 		local icons = require("config.icons")
 
 		require("nvim-tree").setup({

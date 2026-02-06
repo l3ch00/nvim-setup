@@ -44,3 +44,8 @@ vim.opt.smartcase = true -- match case if explicitly stated
 -- See `:help 'confirm'`
 vim.opt.confirm = true
 
+-- UI Enhancements
+vim.opt.pumheight = 10 -- limit completion menu height
+vim.opt.inccommand = "split" -- better search/replace preview
+vim.opt.winborder = "rounded" -- rounded borders for floating windows (Neovim 0.11+)
+
